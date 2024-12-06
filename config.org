@@ -57,15 +57,17 @@ Mac OS doesn't set environment variables correctly for emacs. exec-path-from-she
 random tweaks for emacs
 #+begin_src emacs-lisp
   (use-package emacs
-    :custom
-    (menu-bar-mode t) ;; I actually like having this on
-    (scroll-bar-mode nil)
-    (tool-bar-mode nil)
-    (electric-pair-mode t) ; match parens
-    (global-auto-revert-mode t)
-    (tab-width 4)
-    (make-backup-files nil)
-    (auto-save-default nil))
+	:custom
+	(menu-bar-mode t) ;; I actually like having this on
+	(scroll-bar-mode nil)
+	(tool-bar-mode nil)
+	(electric-pair-mode t) ; match parens
+	(global-auto-revert-mode t)
+	(tab-width 4)
+	(make-backup-files nil)
+	(auto-save-default nil)
+	;; hide commands that don't support the current mode
+	(read-extended-command-predicate #'command-completion-default-include-p))
 #+end_src
 * diff-hl
 Cute little colors on the side to show git status of files
@@ -96,4 +98,11 @@ Make the PDF viewing experience nicer
 	(add-hook 'pdf-view-mode-hook 'pdf-view-restore-mode)
 	:custom
 	(pdf-view-restore-filename (concat user-emacs-directory ".pdf-view-restore")))
+#+end_src
+* Vertico
+Completion stuff for minibuffer thingies
+#+begin_src emacs-lisp
+  (use-package vertico
+	:ensure t
+	:init (vertico-mode))
 #+end_src

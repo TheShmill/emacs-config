@@ -35,7 +35,9 @@
   (global-auto-revert-mode t)
   (tab-width 4)
   (make-backup-files nil)
-  (auto-save-default nil))
+  (auto-save-default nil)
+  ;; hide commands that don't support the current mode
+  (read-extended-command-predicate #'command-completion-default-include-p))
 
 (use-package diff-hl
   :ensure t
@@ -57,3 +59,7 @@
   (add-hook 'pdf-view-mode-hook 'pdf-view-restore-mode)
   :custom
   (pdf-view-restore-filename (concat user-emacs-directory ".pdf-view-restore")))
+
+(use-package vertico
+  :ensure t
+  :init (vertico-mode))
