@@ -67,3 +67,9 @@
 (use-package marginalia ; provide descriptions for vertico stuff
   :ensure t
   :init (marginalia-mode))
+
+(use-package paredit
+  :ensure t
+  :config
+  (add-hook 'lisp-mode-hook 'enable-paredit-mode)
+  (add-hook 'clojure-mode-hook 'enable-paredit-mode))

@@ -110,3 +110,12 @@ Completion stuff for minibuffer thingies
 	:ensure t
 	:init (marginalia-mode))
 #+end_src
+* Paredit
+Fancy manipulation of parens for lisp code
+#+begin_src emacs-lisp
+  (use-package paredit
+	:ensure t
+	:config
+	(add-hook 'lisp-mode-hook 'enable-paredit-mode)
+	(add-hook 'clojure-mode-hook 'enable-paredit-mode))
+#+end_src
