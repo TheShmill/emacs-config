@@ -67,3 +67,13 @@ random tweaks for emacs
     (make-backup-files nil)
     (auto-save-default nil))
 #+end_src
+* diff-hl
+Cute little colors on the side to show git status of files
+#+begin_src emacs-lisp
+  (use-package diff-hl
+	:ensure t
+	:config
+	(global-diff-hl-mode)
+	(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
+	)
+#+end_src

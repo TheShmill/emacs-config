@@ -36,3 +36,10 @@
   (tab-width 4)
   (make-backup-files nil)
   (auto-save-default nil))
+
+(use-package diff-hl
+  :ensure t
+  :config
+  (global-diff-hl-mode)
+  (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
+  )
