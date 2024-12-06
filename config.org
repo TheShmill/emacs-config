@@ -1,0 +1,53 @@
+#+TITLE: Shmill's Emacs Config
+#+Author: TheShmill
+#+Description: My config for emacs, heavily inspired by kickstart.emacs
+#+PROPERTY: header-args:emacs-lisp :tangle ./init.el :mkdirp yes
+#+Startup: showeverything
+#+OPTIONS: toc:2
+* config tangle
+Use org-tangle to convert this org file into an elisp file.
+#+begin_src emacs-lisp
+  (defun start/org-babel-tangle-file ()
+    "Tangle config.org into init.el"
+    (when (string-equal (file-name-directory (buffer-file-name))
+			(expand-file-name user-emacs-directory))
+      (let ((org-confirm-babel-evaluate t))
+	(org-babel-tangle))))
+  (add-hook 'org-mode-hook (lambda () (add-hook 'after-save-hook #'start/org-babel-tangle-file)))
+#+end_src
+* custom.el
+We don't want random customize junk to be in init.el, so we'll put it in custom.el
+#+begin_src emacs-lisp
+  (setq custom-file (concat user-emacs-directory "custom.el"))
+  (when (file-exists-p custom-file)
+    (load custom-file))
+#+end_src
+* Mac os meta key
+I'd like to use command instead of option for meta.
+#+begin_src emacs-lisp
+  (setq mac-command-modifier 'meta
+	mac-option-modifier nil)
+#+end_src
+* Exec shell from path
+Mac OS doesn't set environment variables correctly for emacs. exec-path-from-shell package fixes this.
+#+begin_src emacs-lisp
+  (exec-path-from-shell-initialize)
+#+end_src
+* use-package
+use-package is a nice library for configuring and installing packages
+#+begin_src emacs-lisp
+  (require 'use-package)
+#+end_src
+* MELPA
+A bunch of extra libraries for emacs
+#+begin_src emacs-lisp
+  (require 'package)
+  (add-to-list 'package-archives
+	       '("melpa" . "https://melpa.org/packages/") t)
+#+end_src
+* Magit
+Awesome wrapper around git
+#+begin_src emacs-lisp
+  (use-package magit
+    :ensure t)  
+#+end_src
