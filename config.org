@@ -46,10 +46,24 @@ Awesome wrapper around git
   (use-package magit
     :ensure t)  
 #+end_src
-* Exec shell from path
+* exec-shell-from-path
 Mac OS doesn't set environment variables correctly for emacs. exec-path-from-shell package fixes this.
 #+begin_src emacs-lisp
   (use-package exec-path-from-shell
     :ensure t
     :config (exec-path-from-shell-initialize))
+#+end_src
+* General emacs settings
+random tweaks for emacs
+#+begin_src emacs-lisp
+  (use-package emacs
+    :custom
+    (menu-bar-mode t) ;; I actually like having this on
+    (scroll-bar-mode nil)
+    (tool-bar-mode nil)
+    (electric-pair-mode t) ; match parens
+    (global-auto-revert-mode t)
+    (tab-width 4)
+    (make-backup-files nil)
+    (auto-save-default nil))
 #+end_src
