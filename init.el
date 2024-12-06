@@ -2,7 +2,7 @@
   "Tangle config.org into init.el"
   (when (string-equal (file-name-directory (buffer-file-name))
 		      (expand-file-name user-emacs-directory))
-    (let ((org-confirm-babel-evaluate t))
+    (let ((org-confirm-babel-evaluate nil))
       (org-babel-tangle))))
 (add-hook 'org-mode-hook (lambda () (add-hook 'after-save-hook #'start/org-babel-tangle-file)))
 
