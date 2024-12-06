@@ -13,8 +13,6 @@
 (setq mac-command-modifier 'meta
       mac-option-modifier nil)
 
-(exec-path-from-shell-initialize)
-
 (require 'use-package)
 
 (require 'package)
@@ -23,3 +21,7 @@
 
 (use-package magit
   :ensure t)
+
+(use-package exec-path-from-shell
+  :ensure t
+  :config (exec-path-from-shell-initialize))

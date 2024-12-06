@@ -28,11 +28,6 @@ I'd like to use command instead of option for meta.
   (setq mac-command-modifier 'meta
 	mac-option-modifier nil)
 #+end_src
-* Exec shell from path
-Mac OS doesn't set environment variables correctly for emacs. exec-path-from-shell package fixes this.
-#+begin_src emacs-lisp
-  (exec-path-from-shell-initialize)
-#+end_src
 * use-package
 use-package is a nice library for configuring and installing packages
 #+begin_src emacs-lisp
@@ -50,4 +45,11 @@ Awesome wrapper around git
 #+begin_src emacs-lisp
   (use-package magit
     :ensure t)  
+#+end_src
+* Exec shell from path
+Mac OS doesn't set environment variables correctly for emacs. exec-path-from-shell package fixes this.
+#+begin_src emacs-lisp
+  (use-package exec-path-from-shell
+    :ensure t
+    :config (exec-path-from-shell-initialize))
 #+end_src
