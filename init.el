@@ -63,3 +63,7 @@
 (use-package vertico
   :ensure t
   :init (vertico-mode))
+
+(use-package marginalia ; provide descriptions for vertico stuff
+  :ensure t
+  :init (marginalia-mode))
