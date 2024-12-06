@@ -43,3 +43,17 @@
   (global-diff-hl-mode)
   (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
   )
+
+(use-package vterm
+  :ensure t)
+
+(use-package pdf-tools
+  :ensure t)
+
+(use-package pdf-view-restore
+  :ensure t
+  :after pdf-tools
+  :config
+  (add-hook 'pdf-view-mode-hook 'pdf-view-restore-mode)
+  :custom
+  (pdf-view-restore-filename (concat user-emacs-directory ".pdf-view-restore")))

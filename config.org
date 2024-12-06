@@ -77,3 +77,23 @@ Cute little colors on the side to show git status of files
 	(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
 	)
 #+end_src
+* vterm
+Really solid terminal, but I might try eshell later
+#+begin_src emacs-lisp
+  (use-package vterm
+	:ensure t)
+#+end_src
+* PDF reading
+Make the PDF viewing experience nicer
+#+begin_src emacs-lisp
+  (use-package pdf-tools
+	:ensure t)
+
+  (use-package pdf-view-restore
+	:ensure t
+	:after pdf-tools
+	:config
+	(add-hook 'pdf-view-mode-hook 'pdf-view-restore-mode)
+	:custom
+	(pdf-view-restore-filename (concat user-emacs-directory ".pdf-view-restore")))
+#+end_src
