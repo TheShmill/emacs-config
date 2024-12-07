@@ -124,3 +124,12 @@ Fancy manipulation of parens for lisp code
 	(add-hook 'lisp-mode-hook 'enable-paredit-mode)
 	(add-hook 'clojure-mode-hook 'enable-paredit-mode))
 #+end_src
+* orderless
+lets me do more fuzzy find stuff
+#+begin_src emacs-lisp
+	(use-package orderless
+	  :ensure t
+	  :custom
+	  (completion-styles '(orderless basic))
+	  (completion-category-overrides '((file (styles basic partial-completion)))))
+#+end_src
