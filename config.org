@@ -133,3 +133,9 @@ lets me do more fuzzy find stuff
 	  (completion-styles '(orderless basic))
 	  (completion-category-overrides '((file (styles basic partial-completion)))))
 #+end_src
+* Haskell
+Support for Haskell
+#+begin_src emacs-lisp
+	(use-package haskell-mode
+	  :ensure t)
+#+end_src
