@@ -94,7 +94,8 @@ Really solid terminal, but I might try eshell later
 Make the PDF viewing experience nicer
 #+begin_src emacs-lisp
   (use-package pdf-tools
-	:ensure t)
+	:ensure t
+	:init (pdf-tools-install))
 
   (use-package pdf-view-restore
 	:ensure t
@@ -127,15 +128,22 @@ Fancy manipulation of parens for lisp code
 * orderless
 lets me do more fuzzy find stuff
 #+begin_src emacs-lisp
-	(use-package orderless
-	  :ensure t
-	  :custom
-	  (completion-styles '(orderless basic))
-	  (completion-category-overrides '((file (styles basic partial-completion)))))
+  (use-package orderless
+	:ensure t
+	:custom
+	(completion-styles '(orderless basic))
+	(completion-category-overrides '((file (styles basic partial-completion)))))
 #+end_src
 * Haskell
 Support for Haskell
 #+begin_src emacs-lisp
-	(use-package haskell-mode
-	  :ensure t)
+  (use-package haskell-mode
+	:ensure t)
+#+end_src
+* Which-key
+Helps with seeing keybinds
+#+begin_src emacs-lisp
+  (use-package which-key
+	:ensure t
+	:init (which-key-mode))
 #+end_src

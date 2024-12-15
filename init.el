@@ -52,7 +52,8 @@
   :ensure t)
 
 (use-package pdf-tools
-  :ensure t)
+  :ensure t
+  :init (pdf-tools-install))
 
 (use-package pdf-view-restore
   :ensure t
@@ -84,3 +85,7 @@
 
 (use-package haskell-mode
   :ensure t)
+
+(use-package which-key
+  :ensure t
+  :init (which-key-mode))
