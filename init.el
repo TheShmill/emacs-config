@@ -1,11 +1,3 @@
-(defun start/org-babel-tangle-file ()
-  "Tangle config.org into init.el"
-  (when (string-equal (file-name-directory (buffer-file-name))
-		  (expand-file-name user-emacs-directory))
-    (let ((org-confirm-babel-evaluate nil))
-  (org-babel-tangle))))
-(add-hook 'org-mode-hook (lambda () (add-hook 'after-save-hook #'start/org-babel-tangle-file)))
-
 (load-theme 'wombat)
 
 (setq custom-file (concat user-emacs-directory "custom.el"))
@@ -45,8 +37,7 @@
   :ensure t
   :config
   (global-diff-hl-mode)
-  (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
-  )
+  (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
 
 (use-package vterm
   :ensure t)
@@ -73,9 +64,7 @@
 
 (use-package paredit
   :ensure t
-  :config
-  (add-hook 'lisp-mode-hook 'enable-paredit-mode)
-  (add-hook 'clojure-mode-hook 'enable-paredit-mode))
+  :hook ((lisp-mode clojure-mode) . enable-paredit-mode))
 
 (use-package orderless
   :ensure t
@@ -89,3 +78,10 @@
 (use-package which-key
   :ensure t
   :init (which-key-mode))
+
+(use-package clojure-mode
+  :ensure t)
+
+(use-package cider
+  :ensure t
+  :hook ((clojure-mode clojure-ts-mode) . cider-mode))
