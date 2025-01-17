@@ -64,7 +64,7 @@
 
 (use-package paredit
   :ensure t
-  :hook ((lisp-mode clojure-mode) . enable-paredit-mode))
+  :hook ((lisp-mode clojure-mode emacs-lisp-mode) . enable-paredit-mode))
 
 (use-package orderless
   :ensure t
@@ -85,3 +85,6 @@
 (use-package cider
   :ensure t
   :hook ((clojure-mode clojure-ts-mode) . cider-mode))
+
+(use-package sly
+  :ensure t)
