@@ -87,4 +87,6 @@
   :hook ((clojure-mode clojure-ts-mode) . cider-mode))
 
 (use-package sly
-  :ensure t)
+  :ensure t
+  :custom
+  (inferior-lisp-program "/opt/homebrew/bin/sbcl"))
