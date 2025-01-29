@@ -90,3 +90,9 @@
   :ensure t
   :custom
   (inferior-lisp-program "/opt/homebrew/bin/sbcl"))
+
+(use-package avy
+  :ensure t
+  :config
+  (avy-setup-default)
+  (global-set-key (kbd "C-r") 'avy-goto-char-2))
