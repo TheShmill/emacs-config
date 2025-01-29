@@ -30,6 +30,7 @@
   (tab-width 4)
   (make-backup-files nil)
   (auto-save-default nil)
+  (tab-always-indent 'complete)
   ;; hide commands that don't support the current mode
   (read-extended-command-predicate #'command-completion-default-include-p))
 
@@ -96,3 +97,7 @@
   :config
   (avy-setup-default)
   (global-set-key (kbd "C-r") 'avy-goto-char-2))
+
+(use-package corfu
+  :ensure t
+  :init (global-corfu-mode))
