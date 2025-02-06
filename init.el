@@ -101,3 +101,9 @@
 (use-package corfu
   :ensure t
   :init (global-corfu-mode))
+
+(use-package rustic
+  :ensure t
+  :custom
+  (rustic-lsp-client 'eglot)
+  (rustic-cargo-use-last-stored-arguments t))
