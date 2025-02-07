@@ -1,5 +1,3 @@
-(load-theme 'wombat)
-
 (setq custom-file (concat user-emacs-directory "custom.el"))
 (when (file-exists-p custom-file)
   (load custom-file))
@@ -107,6 +105,13 @@
   :custom
   (rustic-lsp-client 'eglot)
   (rustic-cargo-use-last-stored-arguments t))
+
+(use-package catppuccin-theme
+  :ensure t
+  :config
+  (load-theme 'catppuccin)
+  (setq catppuccin-flavor 'latte)
+  (catppuccin-reload))
 
 (use-package rainbow-delimiters
   :ensure t
