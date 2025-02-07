@@ -108,10 +108,7 @@
 
 (use-package catppuccin-theme
   :ensure t
-  :config
-  (load-theme 'catppuccin)
-  (setq catppuccin-flavor 'macchiato)
-  (catppuccin-reload))
+  :hook (after-init . (lambda () (load-theme 'catppuccin))))
 
 (use-package rainbow-delimiters
   :ensure t
