@@ -110,7 +110,7 @@
   :ensure t
   :config
   (load-theme 'catppuccin)
-  (setq catppuccin-flavor 'latte)
+  (setq catppuccin-flavor 'macchiato)
   (catppuccin-reload))
 
 (use-package rainbow-delimiters
