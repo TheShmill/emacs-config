@@ -107,3 +107,7 @@
   :custom
   (rustic-lsp-client 'eglot)
   (rustic-cargo-use-last-stored-arguments t))
+
+(use-package rainbow-delimiters
+  :ensure t
+  :hook ((lisp-mode clojure-mode emacs-lisp-mode) . rainbow-delimiters-mode))
