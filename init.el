@@ -3,7 +3,7 @@
   (load custom-file))
 
 (setq mac-command-modifier 'meta
-  mac-option-modifier nil)
+	  mac-option-modifier nil)
 
 (require 'use-package)
 
