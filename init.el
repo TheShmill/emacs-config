@@ -115,3 +115,25 @@
 (use-package rainbow-delimiters
   :ensure t
   :hook ((lisp-mode clojure-mode emacs-lisp-mode) . rainbow-delimiters-mode))
+
+(use-package elfeed
+  :ensure t
+  :custom
+  (elfeed-feeds '("https://fasterthanli.me/index.xml"
+				  "https://notgull.net/feed.xml"
+				  "https://planet.lisp.org/rss20.xml"
+				  "https://www.tedinski.com/feed.xml"
+				  "https://matklad.github.io/feed.xml"
+				  "https://clojure.org/feed.xml"
+				  "https://without.boats/index.xml"
+				  "https://blog.rust-lang.org/feed.xml"
+				  "https://go.dev/blog/feed.atom"
+				  "https://nora.codes/index.xml"
+				  "https://what-if.xkcd.com/feed.atom"
+				  "https://xkcd.com/atom.xml"
+				  "https://planet.clojure.in/atom.xml"
+				  "https://radekmie.dev/atom.xml"
+				  "https://kerkour.com/feed.xml"
+				  "https://erikarow.land/combined.xml"
+				  "https://this-week-in-rust.org/rss.xml"
+				  "https://tmandry.gitlab.io/blog/index.xml")))
