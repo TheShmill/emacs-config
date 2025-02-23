@@ -108,6 +108,8 @@
 
 (use-package catppuccin-theme
   :ensure t
+  :custom
+  (catppuccin-theme 'macchiato)
   :hook (after-init . (lambda () (load-theme 'catppuccin))))
 
 (use-package rainbow-delimiters
