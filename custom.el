@@ -5,10 +5,8 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    '("4398d67fd7f7b9e56215710689705e820d953d994c2fc5b6f1cfa20275ba5d5b" default))
- '(elcord-display-buffer-details t)
+ '(elcord-display-elapsed t)
  '(elcord-mode t nil (elcord))
- '(elcord-refresh-rate 5)
- '(elcord-use-major-mode-as-main-icon t)
  '(package-selected-packages
    '(elcord elfeed avy catppuccin-theme catppuccin rainbow-delimiters rustic eglot corfu sly clojure-mode which-key haskell-mode orderless paredit marginalia vertico pdf-view-restore pdf-tools vterm diff-hl magit exec-path-from-shell cider)))
 (custom-set-faces
