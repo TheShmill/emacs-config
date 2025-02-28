@@ -8,6 +8,8 @@
  '(elcord-display-elapsed t)
  '(elcord-idle-timer 1200)
  '(elcord-mode t nil (elcord))
+ '(elcord-quiet t)
+ '(elcord-refresh-rate 5)
  '(elcord-use-major-mode-as-main-icon t)
  '(package-selected-packages
    '(elcord elfeed avy catppuccin-theme catppuccin rainbow-delimiters rustic eglot corfu sly clojure-mode which-key haskell-mode orderless paredit marginalia vertico pdf-view-restore pdf-tools vterm diff-hl magit exec-path-from-shell cider)))
