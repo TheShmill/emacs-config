@@ -4,9 +4,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("4398d67fd7f7b9e56215710689705e820d953d994c2fc5b6f1cfa20275ba5d5b" default))
+   '("7bea8c8136b95e40a3def71cc2953e29d2553078ba1730d8262f1dccc586fbab" default))
  '(elcord-display-elapsed t)
+ '(elcord-idle-timer 1200)
  '(elcord-mode t nil (elcord))
+ '(elcord-use-major-mode-as-main-icon t)
  '(package-selected-packages
    '(elcord elfeed avy catppuccin-theme catppuccin rainbow-delimiters rustic eglot corfu sly clojure-mode which-key haskell-mode orderless paredit marginalia vertico pdf-view-restore pdf-tools vterm diff-hl magit exec-path-from-shell cider)))
 (custom-set-faces
