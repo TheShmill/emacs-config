@@ -94,7 +94,7 @@
   :ensure t
   :config
   (avy-setup-default)
-  (global-set-key (kbd "C-r") 'avy-goto-char-2))
+  (global-set-key (kbd "C-z") 'avy-goto-char-2))
 
 (use-package corfu
   :ensure t
