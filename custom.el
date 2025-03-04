@@ -6,7 +6,6 @@
  '(custom-safe-themes
    '("7bea8c8136b95e40a3def71cc2953e29d2553078ba1730d8262f1dccc586fbab" default))
  '(elcord-display-elapsed t)
- '(elcord-idle-timer 1200)
  '(elcord-mode t nil (elcord))
  '(elcord-quiet t)
  '(elcord-refresh-rate 5)
