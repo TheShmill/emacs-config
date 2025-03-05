@@ -28,6 +28,7 @@
   (tab-width 4)
   (make-backup-files nil)
   (auto-save-default nil)
+  (indent-tabs-mode nil)
   (tab-always-indent 'complete)
   ;; hide commands that don't support the current mode
   (read-extended-command-predicate #'command-completion-default-include-p))
