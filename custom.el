@@ -4,14 +4,17 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("7bea8c8136b95e40a3def71cc2953e29d2553078ba1730d8262f1dccc586fbab" default))
+   '("23ee873f9287867e371f4215536e3a83436c732db44e271ab51c9333c2add543" default))
  '(elcord-display-elapsed t)
  '(elcord-mode t nil (elcord))
  '(elcord-quiet t)
  '(elcord-refresh-rate 5)
  '(elcord-use-major-mode-as-main-icon t)
  '(package-selected-packages
-   '(elcord elfeed avy catppuccin-theme catppuccin rainbow-delimiters rustic eglot corfu sly clojure-mode which-key haskell-mode orderless paredit marginalia vertico pdf-view-restore pdf-tools vterm diff-hl magit exec-path-from-shell cider)))
+   '(elcord elfeed avy catppuccin-theme catppuccin rainbow-delimiters
+            rustic eglot corfu sly clojure-mode which-key haskell-mode
+            orderless paredit marginalia vertico pdf-view-restore
+            pdf-tools vterm diff-hl magit exec-path-from-shell cider)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
