@@ -4,7 +4,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("23ee873f9287867e371f4215536e3a83436c732db44e271ab51c9333c2add543"
+   '("c46651ab216eb31e699be1bd5e6df8229b08005b534194c1ea92519b09661d71"
+     "23ee873f9287867e371f4215536e3a83436c732db44e271ab51c9333c2add543"
      default))
  '(elcord-display-elapsed t)
  '(elcord-mode t nil (elcord))
