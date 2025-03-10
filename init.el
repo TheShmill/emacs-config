@@ -141,3 +141,8 @@
 
 (use-package elcord
   :ensure t)
+
+(use-package htmlize
+  :ensure t
+  :custom
+  (htmlize-output-type 'inline-css))
