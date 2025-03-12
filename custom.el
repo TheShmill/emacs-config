@@ -8,6 +8,7 @@
      "23ee873f9287867e371f4215536e3a83436c732db44e271ab51c9333c2add543"
      default))
  '(elcord-display-elapsed t)
+ '(elcord-idle-timer 1200)
  '(elcord-mode t nil (elcord))
  '(elcord-quiet t)
  '(elcord-refresh-rate 5)
