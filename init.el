@@ -146,3 +146,9 @@
   :ensure t
   :custom
   (htmlize-output-type 'inline-css))
+
+(use-package gptel
+  :ensure t
+  :config
+  (setq gptel-model 'gemini-1.5-pro-latest
+        gptel-backend (gptel-make-gemini "Gemini" :stream t :key gptel-api-key)))
