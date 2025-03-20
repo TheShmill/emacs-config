@@ -152,3 +152,5 @@
   :config
   (setq gptel-model 'gemini-1.5-pro-latest
         gptel-backend (gptel-make-gemini "Gemini" :stream t :key gptel-api-key)))
+
+(global-set-key (kbd "C-O") 'join-line)
