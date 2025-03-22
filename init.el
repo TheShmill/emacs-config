@@ -154,3 +154,9 @@
         gptel-backend (gptel-make-gemini "Gemini" :stream t :key gptel-api-key)))
 
 (global-set-key (kbd "C-S-O") 'join-line)
+
+(use-package go-mode
+  :ensure t
+  :config
+  (add-hook 'go-mode-hook 'eglot-ensure)
+  (add-hook 'go-mode-hook (lambda () (add-hook 'before-save-hook 'eglot-format-buffer))))
