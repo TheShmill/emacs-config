@@ -160,3 +160,7 @@
   :config
   (add-hook 'go-mode-hook 'eglot-ensure)
   (add-hook 'go-mode-hook (lambda () (add-hook 'before-save-hook 'eglot-format-buffer))))
+
+(use-package zone
+  :config
+  (zone-when-idle 120))
