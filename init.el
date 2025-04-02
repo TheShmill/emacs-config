@@ -139,7 +139,8 @@
 				  "https://kerkour.com/feed.xml"
 				  "https://erikarow.land/combined.xml"
 				  "https://this-week-in-rust.org/rss.xml"
-				  "https://tmandry.gitlab.io/blog/index.xml")))
+				  "https://tmandry.gitlab.io/blog/index.xml"
+                  "https://blog.codinghorror.com/rss")))
 
 (use-package elcord
   :ensure t)
