@@ -108,12 +108,12 @@
   :custom
   (rustic-lsp-client 'eglot)
   (rustic-cargo-use-last-stored-arguments t))
-
-(use-package catppuccin-theme
-  :ensure t
-  :custom
-  (catppuccin-theme 'macchiato)
-  :hook (after-init . (lambda () (load-theme 'catppuccin))))
+(load-theme 'wombat)
+;; (use-package catppuccin-theme
+;;   :ensure t
+;;   :custom
+;;   (catppuccin-theme 'macchiato)
+;;   :hook (after-init . (lambda () (load-theme 'catppuccin))))
 
 (use-package rainbow-delimiters
   :ensure t
