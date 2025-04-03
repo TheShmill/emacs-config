@@ -166,4 +166,4 @@
 
 (use-package zone
   :config
-  (zone-when-idle 120))
+  (zone-when-idle 300))
