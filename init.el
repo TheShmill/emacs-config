@@ -166,4 +166,5 @@
 
 (use-package zone
   :config
-  (zone-when-idle 300))
+  (zone-when-idle 300)
+  (setf zone-programs [zone-pgm-drip zone-pgm-putz-with-case zone-pgm-rotate-RL-variable]))
