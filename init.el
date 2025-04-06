@@ -164,7 +164,7 @@
   (add-hook 'go-mode-hook 'eglot-ensure)
   (add-hook 'go-mode-hook (lambda () (add-hook 'before-save-hook 'eglot-format-buffer))))
 
-(use-package zone
-  :config
-  (zone-when-idle 300)
-  (setf zone-programs [zone-pgm-drip zone-pgm-putz-with-case zone-pgm-rotate-RL-variable]))
+;; (use-package zone
+;;   :config
+;;   (zone-when-idle 300)
+;;   (setf zone-programs [zone-pgm-drip zone-pgm-putz-with-case zone-pgm-rotate-RL-variable]))
