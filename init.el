@@ -89,6 +89,7 @@
 (use-package sly
   :ensure t
   :custom
+  (sly-compile-file-options '(:fasl-directory "/tmp/sly-fasls/"))
   (inferior-lisp-program "/opt/homebrew/bin/sbcl"))
 
 (use-package avy
