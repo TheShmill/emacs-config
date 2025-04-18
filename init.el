@@ -19,6 +19,8 @@
   :config (exec-path-from-shell-initialize))
 
 (use-package emacs
+  :config
+  (keymap-global-set "M-`" 'other-frame)
   :custom
   (menu-bar-mode t) ;; I actually like having this on
   (scroll-bar-mode nil)
