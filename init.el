@@ -64,7 +64,7 @@
 
 (use-package paredit
   :ensure t
-  :hook ((lisp-mode clojure-mode emacs-lisp-mode) . enable-paredit-mode))
+  :hook ((lisp-mode clojure-mode emacs-lisp-mode racket-mode) . enable-paredit-mode))
 
 (use-package orderless
   :ensure t
@@ -118,7 +118,7 @@
 
 (use-package rainbow-delimiters
   :ensure t
-  :hook ((lisp-mode clojure-mode emacs-lisp-mode) . rainbow-delimiters-mode))
+  :hook ((lisp-mode clojure-mode emacs-lisp-mode racket-mode racket-repl-mode) . rainbow-delimiters-mode))
 
 (use-package elfeed
   :ensure t
@@ -169,3 +169,9 @@
 ;;   :config
 ;;   (zone-when-idle 300)
 ;;   (setf zone-programs [zone-pgm-drip zone-pgm-putz-with-case zone-pgm-rotate-RL-variable]))
+
+(use-package racket-mode
+  :ensure t
+  :config
+  (require 'racket-xp)
+  (add-hook 'racket-mode-hook #'racket-xp-mode))
