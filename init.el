@@ -176,4 +176,6 @@
   :ensure t
   :config
   (require 'racket-xp)
-  (add-hook 'racket-mode-hook #'racket-xp-mode))
+  (add-hook 'racket-mode-hook #'racket-xp-mode)
+  (add-hook 'racket-repl-mode-hook
+            (lambda () (keymap-set racket-repl-mode-map "C-c M-o" 'racket-repl-clear-leaving-last-prompt))))
