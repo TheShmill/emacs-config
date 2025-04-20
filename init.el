@@ -9,7 +9,7 @@
 
 (require 'package)
 (add-to-list 'package-archives
-	     '("melpa" . "https://melpa.org/packages/") t)
+             '("melpa" . "https://melpa.org/packages/") t)
 
 (use-package magit
   :ensure t)
@@ -181,3 +181,8 @@
             (lambda () (keymap-set racket-repl-mode-map "C-c M-o" 'racket-repl-clear-leaving-last-prompt))))
 
 (put 'narrow-to-region 'disabled nil)
+
+(use-package apheleia
+  :ensure t
+  :config
+  (apheleia-global-mode 1))
