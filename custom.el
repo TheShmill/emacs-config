@@ -7,7 +7,6 @@
    '("c46651ab216eb31e699be1bd5e6df8229b08005b534194c1ea92519b09661d71"
      "23ee873f9287867e371f4215536e3a83436c732db44e271ab51c9333c2add543"
      default))
- '(elcord-boring-buffers-regexp-list '("^ " "\\\\*Messages\\\\*" "\\\\*scratch\\\\*"))
  '(elcord-display-elapsed t)
  '(elcord-idle-timer 1200)
  '(elcord-mode t nil (elcord))
