@@ -175,6 +175,7 @@
       (run-with-idle-timer elcord-idle-timer t 'elcord--start-idle))
     (elcord--start-reconnect)
 
+    ;; We only want to run this function on the first frame that gets created
     (remove-hook 'after-make-frame-functions 'elcord--enable-when-frame-created))
 
 
