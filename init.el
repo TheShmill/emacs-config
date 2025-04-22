@@ -148,7 +148,37 @@
                   "https://blog.codinghorror.com/rss")))
 
 (use-package elcord
-  :ensure t)
+  :ensure t
+  :config
+  ;; https://github.com/Mstrodl/elcord/issues/17
+  (defun elcord--disable-when-everything-closed (f)
+    ;; only pause if we are about to delete the last visible frame
+    (when (let ((frames (delete f (visible-frame-list))))
+            (or (null frames)
+                (and (null (cdr frames))
+                     (eq (car frames) terminal-frame))))
+      ;; stop updates and store elapsed time
+      (setq elcord--startup-time (string-to-number (format-time-string "%s" (time-subtract nil elcord--startup-time))))
+      (elcord--disable)
+      ;; Stop reconnect timer, idk why elcord--disable doesn't
+      (when elcord--reconnect-timer
+        (cancel-timer elcord--reconnect-timer))
+
+      ;; reenable when a new frame gets made
+      (add-hook 'after-make-frame-functions 'elcord--enable-when-frame-created)))
+  
+  (defun elcord--enable-when-frame-created (f)
+    (ignore f)
+    ;; resume elapsed time and continue updates
+    (setq elcord--startup-time (string-to-number (format-time-string "%s" (time-subtract nil elcord--startup-time))))
+    (when elcord-idle-timer
+      (run-with-idle-timer elcord-idle-timer t 'elcord--start-idle))
+    (elcord--start-reconnect)
+    
+    (remove-hook 'after-make-frame-functions 'elcord--enable-when-frame-created))
+  
+  
+  (add-hook 'delete-frame-functions 'elcord--disable-when-everything-closed))
 
 (use-package htmlize
   :ensure t
