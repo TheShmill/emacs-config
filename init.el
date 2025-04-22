@@ -3,7 +3,7 @@
   (load custom-file))
 
 (setq mac-command-modifier 'meta
-	  mac-option-modifier nil)
+      mac-option-modifier nil)
 
 (require 'use-package)
 
@@ -128,23 +128,23 @@
   :ensure t
   :custom
   (elfeed-feeds '("https://fasterthanli.me/index.xml"
-				  "https://notgull.net/feed.xml"
-				  "https://planet.lisp.org/rss20.xml"
-				  "https://www.tedinski.com/feed.xml"
-				  "https://matklad.github.io/feed.xml"
-				  "https://clojure.org/feed.xml"
-				  "https://without.boats/index.xml"
-				  "https://blog.rust-lang.org/feed.xml"
-				  "https://go.dev/blog/feed.atom"
-				  "https://nora.codes/index.xml"
-				  "https://what-if.xkcd.com/feed.atom"
-				  "https://xkcd.com/atom.xml"
-				  "https://planet.clojure.in/atom.xml"
-				  "https://radekmie.dev/atom.xml"
-				  "https://kerkour.com/feed.xml"
-				  "https://erikarow.land/combined.xml"
-				  "https://this-week-in-rust.org/rss.xml"
-				  "https://tmandry.gitlab.io/blog/index.xml"
+                  "https://notgull.net/feed.xml"
+                  "https://planet.lisp.org/rss20.xml"
+                  "https://www.tedinski.com/feed.xml"
+                  "https://matklad.github.io/feed.xml"
+                  "https://clojure.org/feed.xml"
+                  "https://without.boats/index.xml"
+                  "https://blog.rust-lang.org/feed.xml"
+                  "https://go.dev/blog/feed.atom"
+                  "https://nora.codes/index.xml"
+                  "https://what-if.xkcd.com/feed.atom"
+                  "https://xkcd.com/atom.xml"
+                  "https://planet.clojure.in/atom.xml"
+                  "https://radekmie.dev/atom.xml"
+                  "https://kerkour.com/feed.xml"
+                  "https://erikarow.land/combined.xml"
+                  "https://this-week-in-rust.org/rss.xml"
+                  "https://tmandry.gitlab.io/blog/index.xml"
                   "https://blog.codinghorror.com/rss")))
 
 (use-package elcord
@@ -166,7 +166,7 @@
 
       ;; reenable when a new frame gets made
       (add-hook 'after-make-frame-functions 'elcord--enable-when-frame-created)))
-  
+
   (defun elcord--enable-when-frame-created (f)
     (ignore f)
     ;; resume elapsed time and continue updates
@@ -174,10 +174,10 @@
     (when elcord-idle-timer
       (run-with-idle-timer elcord-idle-timer t 'elcord--start-idle))
     (elcord--start-reconnect)
-    
+
     (remove-hook 'after-make-frame-functions 'elcord--enable-when-frame-created))
-  
-  
+
+
   (add-hook 'delete-frame-functions 'elcord--disable-when-everything-closed))
 
 (use-package htmlize
