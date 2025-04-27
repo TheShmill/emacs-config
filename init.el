@@ -33,7 +33,7 @@
   (make-backup-files nil)
   (auto-save-default nil)
   (indent-tabs-mode nil)
-  (tab-always-indent 'complete)
+  ;; (tab-always-indent 'complete)
   (dired-dwim-target t)
   ;; hide commands that don't support the current mode
   (read-extended-command-predicate #'command-completion-default-include-p))
