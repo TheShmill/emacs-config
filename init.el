@@ -172,6 +172,12 @@
     (ignore f)
     ;; resume elapsed time and continue updates
     (setq elcord--startup-time (string-to-number (format-time-string "%s" (time-subtract nil elcord--startup-time))))
+
+    ;; FIXME: sends an error message if no frames were open for longer than elcord-idle-time
+    ;; Cause: the timer triggers instantly, but depends on elcord--update-presence-timer being a timer
+    ;; This variable is nil until elcord receives a message from Discord.
+    ;; Possible solution: Delay this until the next time emacs is not idle? Perhaps whenever the next input is entered.
+    ;; This could be achieved with a hook on pre-command-hook and then removing the hook once it is called once
     (when elcord-idle-timer
       (run-with-idle-timer elcord-idle-timer t 'elcord--start-idle))
     (elcord--start-reconnect)
