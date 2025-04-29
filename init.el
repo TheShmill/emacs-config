@@ -35,6 +35,8 @@
   (indent-tabs-mode nil)
   ;; (tab-always-indent 'complete)
   (dired-dwim-target t)
+  ;; Necessary because mac sed is goofy
+  (Man-sed-command "gsed")
   ;; hide commands that don't support the current mode
   (read-extended-command-predicate #'command-completion-default-include-p))
 
