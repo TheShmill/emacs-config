@@ -230,3 +230,7 @@
                '(gleam-ts-mode . ("gleam" "lsp")))
   (add-hook 'gleam-ts-mode
             (lambda () (add-hook 'before-save-hook 'gleam-ts-format))))
+
+
+(use-package markdown-mode
+  :ensure t)
