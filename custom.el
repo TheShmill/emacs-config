@@ -14,10 +14,11 @@
  '(elcord-use-major-mode-as-main-icon t)
  '(package-selected-packages
    '(apheleia avy catppuccin catppuccin-theme cider clojure-mode corfu
-              diff-hl eglot elcord elfeed exec-path-from-shell go-mode
-              haskell-mode htmlize magit marginalia orderless paredit
-              pdf-tools pdf-view-restore racket-mode
-              rainbow-delimiters rustic sly vertico vterm which-key)))
+              diff-hl eglot elcord elfeed exec-path-from-shell
+              gleam-ts-mode go-mode haskell-mode htmlize magit
+              marginalia orderless paredit pdf-tools pdf-view-restore
+              racket-mode rainbow-delimiters rustic sly vertico vterm
+              which-key)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

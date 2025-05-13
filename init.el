@@ -221,3 +221,12 @@
   :ensure t
   :config
   (apheleia-global-mode 1))
+
+(use-package gleam-ts-mode
+  :ensure t
+  :mode (rx ".gleam" eos)
+  :config
+  (add-to-list 'eglot-server-programs
+               '(gleam-ts-mode . ("gleam" "lsp")))
+  (add-hook 'gleam-ts-mode
+            (lambda () (add-hook 'before-save-hook 'gleam-ts-format))))
