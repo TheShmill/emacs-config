@@ -14,9 +14,9 @@
  '(elcord-use-major-mode-as-main-icon t)
  '(package-selected-packages
    '(apheleia avy catppuccin catppuccin-theme cider clojure-mode corfu
-              diff-hl eglot elcord elfeed exec-path-from-shell
-              gleam-ts-mode go-mode haskell-mode htmlize magit
-              marginalia markdown-mode orderless paredit pdf-tools
+              diff-hl eglot elfeed exec-path-from-shell gleam-ts-mode
+              go-mode haskell-mode htmlize magit marginalia
+              markdown-mode orderless paredit pdf-tools
               pdf-view-restore racket-mode rainbow-delimiters rustic
               sly vertico vterm which-key)))
 (custom-set-faces
