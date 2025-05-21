@@ -114,6 +114,9 @@
   :ensure t
   :init
   (setq rust-mode-treesitter-derive t)
+  :config
+  (add-to-list 'eglot-server-programs
+               '(gleam-ts-mode . ("gleam" "lsp")))
   :custom
   (rustic-lsp-client 'eglot)
   (rustic-cargo-use-last-stored-arguments t))
