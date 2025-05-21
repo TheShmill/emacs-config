@@ -7,11 +7,6 @@
    '("c46651ab216eb31e699be1bd5e6df8229b08005b534194c1ea92519b09661d71"
      "23ee873f9287867e371f4215536e3a83436c732db44e271ab51c9333c2add543"
      default))
- '(elcord-display-elapsed t)
- '(elcord-mode t nil (elcord))
- '(elcord-quiet t)
- '(elcord-refresh-rate 5)
- '(elcord-use-major-mode-as-main-icon t)
  '(package-selected-packages
    '(apheleia avy catppuccin catppuccin-theme cider clojure-mode corfu
               diff-hl eglot elfeed exec-path-from-shell gleam-ts-mode
