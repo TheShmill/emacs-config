@@ -113,6 +113,7 @@
 
 (use-package rustic
   :ensure t
+  :after eglot
   :init
   (setq rust-mode-treesitter-derive t)
   :config
