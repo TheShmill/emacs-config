@@ -9,11 +9,13 @@
      default))
  '(package-selected-packages
    '(apheleia avy catppuccin catppuccin-theme cider clojure-mode corfu
-              diff-hl eglot elfeed exec-path-from-shell gleam-ts-mode
-              go-mode haskell-mode htmlize magit marginalia
-              markdown-mode orderless paredit pdf-tools
-              pdf-view-restore racket-mode rainbow-delimiters rustic
-              sly treemacs vertico vterm which-key)))
+              diff-hl eglot elfeed evil evil-collection
+              evil-indent-plus evil-textobj-tree-sitter
+              exec-path-from-shell gleam-ts-mode go-mode haskell-mode
+              htmlize magit marginalia markdown-mode orderless paredit
+              pdf-tools pdf-view-restore racket-mode
+              rainbow-delimiters rustic sly treemacs vertico vterm
+              which-key)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

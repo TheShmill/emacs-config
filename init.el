@@ -242,3 +242,33 @@
 
 (use-package treemacs
   :ensure t)
+
+(use-package evil
+  :ensure t
+  :config
+  (evil-mode)
+  (evil-set-leader 'normal (kbd "SPC"))
+  (evil-global-set-key 'normal (kbd "<leader>fs") 'save-buffer)
+  (evil-global-set-key 'normal (kbd "<leader>ff") 'find-file)
+  (evil-global-set-key 'normal (kbd "s") 'avy-goto-char-2)
+  (evil-global-set-key 'normal (kbd "<leader>g") 'magit)
+  :init
+  (setq evil-want-C-d-scroll t
+        evil-want-C-u-scroll t))
+
+(use-package evil-collection
+  :ensure t
+  :after evil
+  :config
+  (evil-collection-init))
+
+(use-package evil-indent-plus
+  :ensure t
+  :after evil
+  :config
+  (define-key evil-inner-text-objects-map "i" 'evil-indent-plus-i-indent)
+  (define-key evil-outer-text-objects-map "i" 'evil-indent-plus-a-indent)
+  (define-key evil-inner-text-objects-map "I" 'evil-indent-plus-i-indent-up)
+  (define-key evil-outer-text-objects-map "I" 'evil-indent-plus-a-indent-up)
+  (define-key evil-inner-text-objects-map "J" 'evil-indent-plus-i-indent-up-down)
+  (define-key evil-outer-text-objects-map "J" 'evil-indent-plus-a-indent-up-down))
