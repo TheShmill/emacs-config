@@ -24,6 +24,7 @@
   (keymap-global-set "C-t" 'eshell)
   (keymap-global-set "M-t" 'vterm)
   (midnight-mode)
+  (setq clean-buffer-list-delay-general 1)
   :custom
   (menu-bar-mode t) ;; I actually like having this on
   (scroll-bar-mode nil)
