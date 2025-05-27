@@ -250,6 +250,8 @@
   (evil-set-leader 'normal (kbd "SPC"))
   (evil-global-set-key 'normal (kbd "<leader>fs") 'save-buffer)
   (evil-global-set-key 'normal (kbd "<leader>ff") 'find-file)
+  (evil-global-set-key 'normal (kbd "<leader>pf") 'project-find-file)
+  (evil-global-set-key 'normal (kbd "<leader>pp") 'project-switch-project)
   (evil-global-set-key 'normal (kbd "s") 'avy-goto-char-2)
   (evil-global-set-key 'normal (kbd "<leader>g") 'magit)
   :init
