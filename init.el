@@ -255,8 +255,7 @@
   (evil-global-set-key 'normal (kbd "s") 'avy-goto-char-2)
   (evil-global-set-key 'normal (kbd "<leader>g") 'magit)
   :init
-  (setq evil-want-C-d-scroll t
-        evil-want-C-u-scroll t))
+  )
 
 (use-package evil-collection
   :ensure t
