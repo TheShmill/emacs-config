@@ -137,6 +137,7 @@
   :ensure t
   :custom
   (elfeed-feeds '("https://fasterthanli.me/index.xml"
+                  "https://lexi-lambda.github.io/feeds/all.rss.xml"
                   "https://notgull.net/feed.xml"
                   "https://planet.lisp.org/rss20.xml"
                   "https://www.tedinski.com/feed.xml"
