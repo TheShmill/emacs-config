@@ -7,6 +7,9 @@
    '("c46651ab216eb31e699be1bd5e6df8229b08005b534194c1ea92519b09661d71"
      "23ee873f9287867e371f4215536e3a83436c732db44e271ab51c9333c2add543"
      default))
+ '(evil-mode t)
+ '(evil-undo-system 'undo-redo)
+ '(global-evil-collection-unimpaired-mode t)
  '(package-selected-packages
    '(apheleia avy catppuccin catppuccin-theme cider clojure-mode corfu
               diff-hl eglot elfeed evil evil-collection
@@ -15,7 +18,8 @@
               htmlize magit marginalia markdown-mode orderless paredit
               pdf-tools pdf-view-restore racket-mode
               rainbow-delimiters rustic sly treemacs vertico vterm
-              which-key)))
+              which-key))
+ '(which-key-allow-evil-operators nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
