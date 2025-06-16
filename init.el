@@ -239,7 +239,9 @@
 
 
 (use-package markdown-mode
-  :ensure t)
+  :ensure t
+  :config
+  (setq markdown-max-image-size '(256 . 256)))
 
 (use-package treemacs
   :ensure t)
