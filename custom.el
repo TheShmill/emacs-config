@@ -12,13 +12,15 @@
  '(global-evil-collection-unimpaired-mode t)
  '(package-selected-packages
    '(apheleia avy catppuccin catppuccin-theme cider clojure-mode corfu
-              diff-hl eglot elfeed evil evil-collection
-              evil-indent-plus evil-textobj-tree-sitter
-              exec-path-from-shell gleam-ts-mode go-mode haskell-mode
-              htmlize magit marginalia markdown-mode orderless paredit
-              pdf-tools pdf-view-restore racket-mode
-              rainbow-delimiters rustic sly treemacs vertico vterm
-              which-key))
+              diff-hl editorconfig eglot elfeed erlang-ts evil
+              evil-collection evil-indent-plus
+              evil-textobj-tree-sitter exec-path-from-shell faceup
+              flymake gleam-ts-mode go-mode haskell-mode htmlize
+              idlwave magit marginalia markdown-mode orderless org
+              paredit pdf-tools pdf-view-restore python racket-mode
+              rainbow-delimiters rustic sly track-changes tramp
+              transient treemacs verilog-mode vertico vterm which-key
+              window-tool-bar))
  '(which-key-allow-evil-operators nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

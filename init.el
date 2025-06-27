@@ -119,6 +119,7 @@
   :config
   (add-to-list 'eglot-server-programs
                '(gleam-ts-mode . ("gleam" "lsp")))
+  (setq eglot-extend-to-xref t)
   :custom
   (rustic-lsp-client 'eglot)
   (rustic-cargo-use-last-stored-arguments t))
