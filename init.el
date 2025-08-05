@@ -250,6 +250,8 @@
 
 (use-package evil
   :ensure t
+  :init
+  (setq evil-want-keybinding nil)
   :config
   (evil-mode)
   (evil-set-leader 'normal (kbd "SPC"))
