@@ -21,8 +21,7 @@
 (use-package emacs
   :config
   (keymap-global-set "M-`" 'other-frame)
-  (keymap-global-set "C-t" 'eshell)
-  (keymap-global-set "M-t" 'vterm)
+  (keymap-global-set "M-t" 'eshell)
   (midnight-mode)
   (setq clean-buffer-list-delay-general 1)
   :custom
