@@ -12,7 +12,7 @@
  '(global-evil-collection-unimpaired-mode t)
  '(package-selected-packages
    '(apheleia avy catppuccin catppuccin-theme cider clojure-mode corfu
-              diff-hl editorconfig eglot elfeed erlang-ts evil
+              diff-hl editorconfig eglot elfeed erlang-ts ess evil
               evil-collection evil-indent-plus
               evil-textobj-tree-sitter exec-path-from-shell faceup
               flymake gleam-ts-mode go-mode haskell-mode htmlize
