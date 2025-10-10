@@ -156,7 +156,10 @@
                   "https://erikarow.land/combined.xml"
                   "https://this-week-in-rust.org/rss.xml"
                   "https://tmandry.gitlab.io/blog/index.xml"
-                  "https://blog.codinghorror.com/rss")))
+                  "https://blog.codinghorror.com/rss"
+                  "https://pluralistic.net/feed/"
+                  "https://eev.ee/feeds/atom.xml"
+                  "https://www.wheresyoured.at/rss")))
 
 ;; (use-package elcord
 ;;   :ensure t
