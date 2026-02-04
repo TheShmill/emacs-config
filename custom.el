@@ -1,27 +1,3 @@
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   '("c46651ab216eb31e699be1bd5e6df8229b08005b534194c1ea92519b09661d71"
-     "23ee873f9287867e371f4215536e3a83436c732db44e271ab51c9333c2add543"
-     default))
- '(evil-mode t)
- '(evil-undo-system 'undo-redo)
- '(global-evil-collection-unimpaired-mode t)
- '(package-selected-packages
-   '(apheleia avy catppuccin catppuccin-theme cider clojure-mode corfu
-              diff-hl editorconfig eglot elfeed erlang-ts ess evil
-              evil-collection evil-indent-plus
-              evil-textobj-tree-sitter exec-path-from-shell faceup
-              flymake gleam-ts-mode go-mode haskell-mode htmlize
-              idlwave magit marginalia markdown-mode orderless org
-              paredit pdf-tools pdf-view-restore python racket-mode
-              rainbow-delimiters rustic sly track-changes tramp
-              transient treemacs verilog-mode vertico vterm which-key
-              window-tool-bar))
- '(which-key-allow-evil-operators nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -35,3 +11,9 @@
  '(rainbow-delimiters-depth-6-face ((t (:foreground "orchid"))))
  '(rainbow-delimiters-depth-7-face ((t (:foreground "spring green"))))
  '(rainbow-delimiters-depth-8-face ((t (:foreground "sienna1")))))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages nil))

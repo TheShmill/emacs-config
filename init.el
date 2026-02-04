@@ -21,7 +21,6 @@
 (use-package emacs
   :config
   (keymap-global-set "M-`" 'other-frame)
-  (keymap-global-set "M-t" 'eshell)
   (midnight-mode)
   (setq clean-buffer-list-delay-general 1)
   :custom
@@ -92,7 +91,9 @@
 
 (use-package cider
   :ensure t
-  :hook ((clojure-mode clojure-ts-mode) . cider-mode))
+  :hook ((clojure-mode clojure-ts-mode) . cider-mode)
+  :config
+  (setq clojure-toplevel-inside-comment-form t))
 
 (use-package sly
   :ensure t
@@ -122,12 +123,6 @@
   :custom
   (rustic-lsp-client 'eglot)
   (rustic-cargo-use-last-stored-arguments t))
-(load-theme 'wombat)
-;; (use-package catppuccin-theme
-;;   :ensure t
-;;   :custom
-;;   (catppuccin-theme 'macchiato)
-;;   :hook (after-init . (lambda () (load-theme 'catppuccin))))
 
 (use-package rainbow-delimiters
   :ensure t
@@ -138,6 +133,9 @@
   :custom
   (elfeed-feeds '("https://fasterthanli.me/index.xml"
                   "https://lexi-lambda.github.io/feeds/all.rss.xml"
+                  "https://planet.haskell.org/atom.xml"
+                  "https://tymoon.eu/api/reader/atom"
+                  "https://tailrecursion.com/~alan/updates.xml"
                   "https://mmapped.blog/feed.xml"
                   "https://notgull.net/feed.xml"
                   "https://planet.lisp.org/rss20.xml"
@@ -159,63 +157,13 @@
                   "https://blog.codinghorror.com/rss"
                   "https://pluralistic.net/feed/"
                   "https://eev.ee/feeds/atom.xml"
+                  "https://cprss.s3.amazonaws.com/golangweekly.com.xml"
                   "https://www.wheresyoured.at/rss")))
-
-;; (use-package elcord
-;;   :ensure t
-;;   :config
-;;   ;; https://github.com/Mstrodl/elcord/issues/17
-;;   (defun elcord--disable-when-everything-closed (f)
-;;     ;; only pause if we are about to delete the last visible frame
-;;     (when (let ((frames (delete f (visible-frame-list))))
-;;             (or (null frames)
-;;                 (and (null (cdr frames))
-;;                      (eq (car frames) terminal-frame))))
-;;       ;; stop updates and store elapsed time
-;;       (setq elcord--startup-time (string-to-number (format-time-string "%s" (time-subtract nil elcord--startup-time))))
-;;       (elcord--disable)
-;;       ;; Stop reconnect timer, idk why elcord--disable doesn't
-;;       (when elcord--reconnect-timer
-;;         (cancel-timer elcord--reconnect-timer))
-
-;;       ;; reenable when a new frame gets made
-;;       (add-hook 'after-make-frame-functions 'elcord--enable-when-frame-created)))
-
-;;   (defun elcord--enable-when-frame-created (f)
-;;     (ignore f)
-;;     ;; resume elapsed time and continue updates
-;;     (setq elcord--startup-time (string-to-number (format-time-string "%s" (time-subtract nil elcord--startup-time))))
-
-;;     ;; FIXME: sends an error message if no frames were open for longer than elcord-idle-time
-;;     ;; Cause: the timer triggers instantly, but depends on elcord--update-presence-timer being a timer
-;;     ;; This variable is nil until elcord receives a message from Discord.
-;;     ;; Possible solution: Delay this until the next time emacs is not idle? Perhaps whenever the next input is entered.
-;;     ;; This could be achieved with a hook on pre-command-hook and then removing the hook once it is called once
-;;     (when elcord-idle-timer
-;;       (run-with-idle-timer elcord-idle-timer t 'elcord--start-idle))
-;;     (elcord--start-reconnect)
-
-;;     ;; We only want to run this function on the first frame that gets created
-;;     (remove-hook 'after-make-frame-functions 'elcord--enable-when-frame-created))
-
-
-;;   (add-hook 'delete-frame-functions 'elcord--disable-when-everything-closed))
 
 (use-package htmlize
   :ensure t
   :custom
   (htmlize-output-type 'inline-css))
-
-(use-package go-mode
-  :ensure t
-  :config
-  (add-hook 'go-mode-hook 'eglot-ensure)
-  (add-hook 'go-mode-hook (lambda () (add-hook 'before-save-hook 'eglot-format-buffer))))
-
-;; (use-package zone
-;;   :config
-;;   (zone-when-idle 300)
-;;   (setf zone-programs [zone-pgm-drip zone-pgm-putz-with-case zone-pgm-rotate-RL-variable]))
 
 (use-package racket-mode
   :ensure t
@@ -224,8 +172,6 @@
   (add-hook 'racket-mode-hook #'racket-xp-mode)
   (add-hook 'racket-repl-mode-hook
             (lambda () (keymap-set racket-repl-mode-map "C-c M-o" 'racket-repl-clear-leaving-last-prompt))))
-
-(put 'narrow-to-region 'disabled nil)
 
 (use-package apheleia
   :ensure t
@@ -247,41 +193,4 @@
   :config
   (setq markdown-max-image-size '(256 . 256)))
 
-(use-package treemacs
-  :ensure t)
 
-(use-package evil
-  :ensure t
-  :init
-  (setq evil-want-keybinding nil)
-  :config
-  (evil-mode)
-  (evil-set-leader 'normal (kbd "SPC"))
-  (evil-global-set-key 'normal (kbd "<leader>fs") 'save-buffer)
-  (evil-global-set-key 'normal (kbd "<leader>ff") 'find-file)
-  (evil-global-set-key 'normal (kbd "<leader>pf") 'project-find-file)
-  (evil-global-set-key 'normal (kbd "<leader>pp") 'project-switch-project)
-  (evil-global-set-key 'normal (kbd "s") 'avy-goto-char-2)
-  (evil-global-set-key 'normal (kbd "<leader>g") 'magit)
-  :init
-  )
-
-(use-package evil-collection
-  :ensure t
-  :after evil
-  :config
-  (evil-collection-init))
-
-(use-package evil-indent-plus
-  :ensure t
-  :after evil
-  :config
-  (define-key evil-inner-text-objects-map "i" 'evil-indent-plus-i-indent)
-  (define-key evil-outer-text-objects-map "i" 'evil-indent-plus-a-indent)
-  (define-key evil-inner-text-objects-map "I" 'evil-indent-plus-i-indent-up)
-  (define-key evil-outer-text-objects-map "I" 'evil-indent-plus-a-indent-up)
-  (define-key evil-inner-text-objects-map "J" 'evil-indent-plus-i-indent-up-down)
-  (define-key evil-outer-text-objects-map "J" 'evil-indent-plus-a-indent-up-down))
-
-(use-package ess
-  :ensure t)
