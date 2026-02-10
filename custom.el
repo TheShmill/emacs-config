@@ -16,4 +16,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages nil))
+ '(midnight-delay 0)
+ '(midnight-mode t)
+ '(package-selected-packages
+   '(apheleia avy cider corfu diff-hl elfeed exec-path-from-shell
+              gleam-ts-mode haskell-mode htmlize magit marginalia
+              orderless paredit pdf-view-restore racket-mode
+              rainbow-delimiters rustic sly vertico vterm)))
