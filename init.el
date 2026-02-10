@@ -204,3 +204,4 @@
   (setq markdown-max-image-size '(256 . 256)))
 
 
+(put 'list-timers 'disabled nil)
