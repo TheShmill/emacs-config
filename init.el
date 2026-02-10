@@ -127,8 +127,6 @@
   :init
   (setq rust-mode-treesitter-derive t)
   :config
-  (add-to-list 'eglot-server-programs
-               '(gleam-ts-mode . ("gleam" "lsp")))
   (setq eglot-extend-to-xref t)
   :custom
   (rustic-lsp-client 'eglot)
