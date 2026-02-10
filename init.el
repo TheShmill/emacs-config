@@ -25,6 +25,7 @@
   (keymap-global-set "M-`" 'other-frame)
   (midnight-mode)
   (setq clean-buffer-list-delay-general 1)
+  (setq ring-bell-function 'ignore)
   :custom
   (menu-bar-mode t) ;; I actually like having this on
   (scroll-bar-mode nil)
