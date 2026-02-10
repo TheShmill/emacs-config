@@ -42,6 +42,14 @@
   ;; hide commands that don't support the current mode
   (read-extended-command-predicate #'command-completion-default-include-p))
 
+(use-package tramp
+  :ensure t
+  :config
+  ;; tramp optimizations
+  (setq remote-file-name-inhibit-locks t)
+  (setq tramp-use-scp-direct-remote-copying t)
+  (setq remote-file-name-inhibit-auto-save t))
+
 (use-package diff-hl
   :ensure t
   :config
