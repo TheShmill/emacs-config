@@ -2,6 +2,8 @@
 (when (file-exists-p custom-file)
   (load custom-file))
 
+(load-theme 'modus-vivendi-tinted)
+
 (setq mac-command-modifier 'meta
       mac-option-modifier nil)
 
