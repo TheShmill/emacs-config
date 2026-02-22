@@ -161,6 +161,7 @@
                   "https://planet.clojure.in/atom.xml"
                   "https://radekmie.dev/atom.xml"
                   "https://kerkour.com/feed.xml"
+                  "https://jmoney.world/rss.xml"
                   "https://erikarow.land/combined.xml"
                   "https://this-week-in-rust.org/rss.xml"
                   "https://tmandry.gitlab.io/blog/index.xml"
