@@ -130,8 +130,8 @@
   (setq rust-mode-treesitter-derive t)
   :config
   (setq eglot-extend-to-xref t)
+  (setq rustic-lsp-client 'eglot)
   :custom
-  (rustic-lsp-client 'eglot)
   (rustic-cargo-use-last-stored-arguments t))
 
 (use-package rainbow-delimiters
