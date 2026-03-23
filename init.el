@@ -142,6 +142,7 @@
   :ensure t
   :custom
   (elfeed-feeds '("https://fasterthanli.me/index.xml"
+                  "https://protesilaos.com/master.xml"
                   "https://lexi-lambda.github.io/feeds/all.rss.xml"
                   "https://planet.haskell.org/atom.xml"
                   "https://tymoon.eu/api/reader/atom"
@@ -168,7 +169,6 @@
                   "https://blog.codinghorror.com/rss"
                   "https://pluralistic.net/feed/"
                   "https://eev.ee/feeds/atom.xml"
-                  "https://cprss.s3.amazonaws.com/golangweekly.com.xml"
                   "https://www.wheresyoured.at/rss")))
 
 (use-package htmlize
