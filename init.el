@@ -198,6 +198,9 @@
   (add-hook 'gleam-ts-mode
             (lambda () (add-hook 'before-save-hook 'gleam-ts-format))))
 
+(use-package go-ts-mode
+  :config
+  (setq go-ts-mode-indent-offset 4))
 
 (use-package markdown-mode
   :ensure t
